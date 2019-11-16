@@ -30,13 +30,14 @@ class ReLUANN():
             tf_weights = scaled_tf_weights
         tf_layers = tf_model.layers
 
+        non_weighted_layers = (tf.keras.layers.Flatten, tf.keras.layers.Dropout)
         gw_inds = []
         gw_vals = []
         n_units = [np.prod(tf_layers[0].input_shape[1:])] # flatten layer shapes to (None, total_size)
         i = j = 1
 
         for layer in tf_layers:
-            if not isinstance(layer, tf.keras.layers.Flatten):
+            if not isinstance(layer, non_weighted_layers):
                 n_units.append(np.prod(layer.output_shape[1:]))
                 syn_weights = np.zeros((n_units[j-1],n_units[j]))
 
@@ -132,7 +133,7 @@ class ReLUANN():
 
     def convert(self, tf_model, scaled_tf_weights=None):
         supported_layers = (tf.keras.layers.Dense,tf.keras.layers.Flatten,tf.keras.layers.Conv2D,
-                            tf.keras.layers.AveragePooling2D)
+                            tf.keras.layers.AveragePooling2D, tf.keras.layers.Dropout)
 
         # Check model compatibility
         if not isinstance(tf_model,tf.keras.models.Sequential):

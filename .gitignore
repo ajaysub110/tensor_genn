@@ -2,3 +2,4 @@
 .idea
 g_model_CODE
 __pycache__/
+cifar_tf_model.h5
