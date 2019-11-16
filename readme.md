@@ -17,7 +17,7 @@ single_example_time = 350\
 dense_membrane_capacitance = 1.0\
 sparse_membrane_capacitance = 0.2\
 neuron_threshold_voltage = -57.0\
-neuron_resting_voltage = -60.0\
+neuron_resting_voltage = -60.0
 
 **On three trials**: (all accuracies on test set)\
 Note: ANN test set contains 10000 example while the GeNN accuracies have been computed on 500 examples.
@@ -40,7 +40,7 @@ single_example_time = 3750 (though it takes only ~2500 with no weight normalizat
 dense_membrane_capacitance = 0.1\
 sparse_membrane_capacitance = 0.01\
 neuron_threshold_voltage = -58.0\
-neuron_resting_voltage = -60.0\
+neuron_resting_voltage = -60.0
 
 **On one trials**: (all accuracies on test set)\
 Note: ANN test set contains 10000 example while the GeNN accuracies have been computed on 500 examples.
