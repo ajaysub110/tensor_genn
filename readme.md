@@ -49,17 +49,17 @@ Note: ANN test set contains 10000 example while the GeNN accuracies have been co
 | ------------- | ---------------------------- | ------------------------- |
 | 77.29%        | 75.0%                        | 77.0%                     |
 
-# Requirements:
+## Requirements:
 - Python 3
 - TensorFlow
 - PyGeNN (see [here](https://github.com/genn-team/genn/blob/master/pygenn/README.md) for installation instructions)
 - Matplotlib
 
-# Installation:
+## Installation:
 Note: Since work is still in progress, we don't have a standard installation procedure. However, in the meantime, you can follow the steps below.
 1. Clone the repository: `git clone https://github.com/genn-team/tensor_genn.git`
 2. Change directory: `cd ~/tensor_genn`
 3. Create a new file and follow a procedure shown in `conversion_example.py` to convert your TensorFlow model into GeNN.
 
-# References:
+## References:
 - Peter U. Diehl, Daniel Neil, Jonathan Binas, Matthew Cook, Shih-Chii Liu, and Michael Pfeiffer. 2015. Fast-Classifying, High-Accuracy Spiking Deep Networks Through Weight and Threshold Balancing. IJCNN (2015)
